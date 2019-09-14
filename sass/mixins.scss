@@ -1,0 +1,27 @@
+
+@mixin box-design($bgColor, $fontColor, $wdth, $hght) 
+{
+    background-color: $bgColor;
+    color: $fontColor;
+    width: $wdth;
+    height: $hght;
+}
+
+@mixin border-design($border, $radius:0)
+{
+    border: $border;
+    border-radius: $radius;
+}
+
+@mixin text-style($shadow: $btn-shadow, $text-color: black)
+{
+    color: $text-color;
+    text-shadow: $shadow;
+}
+
+@mixin box-shadow($shadow)
+{
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}

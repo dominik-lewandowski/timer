@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Timer v1.01</title>
+    <meta name="author" content="DL">
+    <!--Background pattern from https://www.toptal.com -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+	
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="wrapper">
+
+        <div id="main-window">
+            <h1>Timer v1.01</h1>
+            <div class="opt" id="timer"></div>
+            <div id="set-timer">
+                <div class="opt"><input type="time" id="get-time" step='1' min="00:00:00" max="20:00:00" value="00:00:00" required></div>
+                <button name="btn" class="opt" type="button">Start!</button>
+                <button name="btn" class="opt" type="button" style="display: none">Stop!</button>
+                <button name="btn" class="opt" type="button">Reset!</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

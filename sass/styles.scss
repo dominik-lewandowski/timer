@@ -1,0 +1,105 @@
+@import './mixins.scss';
+@import './variables.scss';
+
+*
+{
+    box-sizing: border-box;
+    position: relative;
+    margin: 0;
+    text-align: center;
+    outline: none;
+}
+body
+{
+    background-image: url('../img/cartographer_@2X.png');
+    /*background-color: rgb(63, 60, 60);*/
+    height: 100vh;
+}
+
+h1
+{
+    @include text-style($text-color: white);
+    padding-top: 14px;
+    opacity: .64;
+}
+
+#wrapper
+{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#main-window, input, button, #timer
+{
+    @include box-shadow(0px 0px 5px 0px rgba(0,0,0,0.75));
+}
+
+#main-window
+{
+    @include box-design($main, rgb(223, 219, 219), 300px, 380px);
+    @include border-design(4px solid black, 15px);
+    margin: auto;
+}
+
+#set-timer
+    {
+        padding-top: 4em;
+        button
+        {
+            background-color: $btn-bg;
+            color: whitesmoke;
+            @include border-design(1px solid black, 15px);
+            padding: 5px 2em 5px 2em;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            &:hover
+            {
+                background-color: lighten($btn-bg, 3%);
+                border-color: lighten($btn-bg, 13%);
+            }
+            &:active
+            {
+                background-color: lighten($btn-bg, 8%);
+                border-color: lighten($btn-bg, 30%);
+            }
+        }
+    }
+
+.opt
+{
+    margin-top: 1.2em;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(.13,.24,.35,1.64);
+    input
+    {
+        background-color: $input-bg;
+        padding: 3px;
+        padding-left: 2.1em;
+        @include border-design(1px solid black, 15px);
+        cursor: pointer;
+        &:focus
+        {
+            border-color: lighten($input-bg, 30%);
+            background-color: lighten($input-bg, 8%);
+        }
+    }
+}
+
+#timer
+{
+    @include border-design(1px solid black, 15px);
+    @include text-style;
+    margin-left: 1em;
+    margin-right: 1em;
+    font-size: 42px;
+    font-family: monospace;
+    background-color: $timer-bg;
+}
+//animation trigger
+.active
+{
+    opacity: 0;
+    transform: translateX(-70px);
+}

@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+  position: relative;
+  margin: 0;
+  text-align: center;
+  outline: none;
+}
+
+body {
+  background-image: url("../img/cartographer_@2X.png");
+  /*background-color: rgb(63, 60, 60);*/
+  height: 100vh;
+}
+
+h1 {
+  color: white;
+  text-shadow: 2px 1px 2px rgba(75, 38, 49, 0.582);
+  padding-top: 14px;
+  opacity: 0.64;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#main-window, input, button, #timer {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+#main-window {
+  background-color: rgba(16, 39, 70, 0.55);
+  color: #dfdbdb;
+  width: 300px;
+  height: 380px;
+  border: 4px solid black;
+  border-radius: 15px;
+  margin: auto;
+}
+
+#set-timer {
+  padding-top: 4em;
+}
+#set-timer button {
+  background-color: rgba(39, 37, 37, 0.8);
+  color: whitesmoke;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 5px 2em 5px 2em;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#set-timer button:hover {
+  background-color: rgba(47, 44, 44, 0.8);
+  border-color: rgba(73, 69, 69, 0.8);
+}
+#set-timer button:active {
+  background-color: rgba(60, 57, 57, 0.8);
+  border-color: rgba(118, 111, 111, 0.8);
+}
+
+.opt {
+  margin-top: 1.2em;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.13, 0.24, 0.35, 1.64);
+}
+.opt input {
+  background-color: rgba(125, 112, 169, 0.6);
+  padding: 3px;
+  padding-left: 2.1em;
+  border: 1px solid black;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.opt input:focus {
+  border-color: rgba(212, 207, 226, 0.6);
+  background-color: rgba(148, 137, 184, 0.6);
+}
+
+#timer {
+  border: 1px solid black;
+  border-radius: 15px;
+  color: black;
+  text-shadow: 2px 1px 2px rgba(75, 38, 49, 0.582);
+  margin-left: 1em;
+  margin-right: 1em;
+  font-size: 42px;
+  font-family: monospace;
+  background-color: rgba(161, 150, 192, 0.3);
+}
+
+.active {
+  opacity: 0;
+  transform: translateX(-70px);
+}
+
+/*# sourceMappingURL=styles.css.map */
